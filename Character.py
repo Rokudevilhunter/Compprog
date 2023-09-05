@@ -8,4 +8,4 @@ character = {
     "Fav_food_list": ['watermelon', 'lettuce', 'sandwich'],
     "isAlive": True,
     }
-print('i am a',user_age, user_sex, 'named', user_name)
+print('i am a',user_age,'year old', user_sex, 'named', user_name)
