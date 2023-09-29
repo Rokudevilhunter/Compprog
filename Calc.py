@@ -21,4 +21,3 @@ if math in ["multiply"] or math in ["Multiply"] or math in ["*"]:
 if math in ["divide"] or math in ["Divide"] or math in ["/"]:
     print("Your answer is")
     print(num1 / num2)
-

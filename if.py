@@ -1,3 +1,4 @@
+#1
 on = input("what is your salary? ")
 tw = input("how many years have you been working? ")
 
@@ -10,7 +11,7 @@ if tw != "1":
             if tw != "4":
                 if tw != "5":
                     print(lol)
-
+#2
 ne = input("what is the length of your rectangle? ")
 mab = input("what is the width of your rectangle? ")
 
@@ -21,7 +22,7 @@ if ne != mab:
     print(lel)
 if ne == mab:
     print(lal)
-
+#3
 ol = input("what is your first number? ")
 lo = input("what is your second number? ")
 
@@ -29,7 +30,7 @@ if ol < lo:
     print(f"your biggest number is {lo} ") 
 if lo < ol:
     print(f"you biggest number is {ol}" )
-
+#4
 first = input("how old is the first person? ")
 second = input("how old is your second person? ")
 third = input("how old is your third person? ")
