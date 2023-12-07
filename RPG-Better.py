@@ -41,4 +41,4 @@ if start == True:
     time.sleep(1)
     print(name, r3)
 
-    ##boop
+    
