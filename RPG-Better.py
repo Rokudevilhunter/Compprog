@@ -3,11 +3,13 @@ import time
 
 def Rstart():
     print(name)
+    global cr
     for i in cr:
         time.sleep(1)
-        print(cr)
+        print(i)
     global act
     act = input("What do you do?    ")
+
 def move():
     if act == ("f"):
         if cr == r1:
@@ -21,26 +23,53 @@ def move():
                 print("Oh no, the door is locked")
                 Rstart()
             else:
-                cr == r1
+                cr = r1
                 Rstart()
         if cr == r4:
             print("You can't go through walls")
             Rstart()
+
     if act == ("b"):
-        if cr == r1
-        if cr == r2
-        if cr == r3
-        if cr == r4
+        if cr == r1:
+            cr = r3
+            Rstart() 
+        if cr == r2:
+            print("You can't go through walls!")
+            Rstart()
+        if cr == r3:
+            print("You can't go through walls!")
+            Rstart()
+        if cr == r4:
+            print("You can't go through walls!")
+            Rstart()
+
     if act == ("l"):
-        if cr == r1
-        if cr == r2
-        if cr == r3
-        if cr == r4
+        if cr == r1:
+            print("You can't go through walls!")
+            Rstart()
+        if cr == r2:
+            print("You can't go through walls!")
+            Rstart()
+        if cr == r3:
+            cr = r2
+            Rstart()
+        if cr == r4:
+            cr = r3
+            Rstart()
+
     if act == ("r"):
-        if cr == r1
-        if cr == r2
-        if cr == r3
-        if cr == r4
+        if cr == r1:
+            print("You can't go through walls!")
+            Rstart()
+        if cr == r2:
+            cr = r3
+            Rstart()
+        if cr == r3:
+            cr == r2
+            Rstart()
+        if cr == r4:
+            print("You can't go through walls!")
+            Rstart()
 
 def game():
     global start
@@ -108,6 +137,8 @@ if start == True:
     time.sleep(1)
     name = input("What shall thy name be for thyself...eww i don't want to say that ever again   ")
     time.sleep(1)
+    Rstart()
+    move()
     
 
     
