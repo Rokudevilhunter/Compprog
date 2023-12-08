@@ -1,5 +1,7 @@
 import random
 import time
+global cr
+
 def aor():
     print("Its attacking you!")
     akorrn = input("do you run, or do you fight back")
@@ -25,7 +27,6 @@ def atk():
 
 def Rstart():
     print(name)
-    global cr
     for i in cr:
         time.sleep(1)
         print(i)
@@ -131,29 +132,29 @@ r1 = ["Up","   A dim light",
       "Down","   An old carpet",
       "Front","   A wall",
       "Back","   A door",
-      "left","   A door",
-      "Right","   A door",]
+      "left","   A wall",
+      "Right","   A wall",]
 
 r2 = ["Up","   A Light",
       "Down","   Hard stone floor",
       "Front","   A wall",
       "Back","   A window",
-      "left","   ",
-      "Right","   ",]
+      "left","   A wall",
+      "Right","   A door frame leading to another room",]
 
-r3 = ["Up","   ",
-      "Down","   ",
-      "Front","   ",
-      "Back","   ",
-      "left","   ",
-      "Right","   ",]
+r3 = ["Up","   A light",
+      "Down","   Hard stone floor",
+      "Front","   A Door",
+      "Back","   A beautiful painting of a cute cat. there's some writing that says 'I love to PET my cat'",
+      "left","   A door frame to another room",
+      "Right","   A door frame to another room",]
 
-r4 = ["Up","   ",
-      "Down","   ",
-      "Front","   ",
-      "Back","   ",
-      "left","   ",
-      "Right","   ",]
+r4 = ["Up","   An open ceiling vent",
+      "Down","   A hard stone floor",
+      "Front","   A wall",
+      "Back","   A wall",
+      "left","   A door frame leading to another room",
+      "Right","   A chest",]
 
 game()
 
