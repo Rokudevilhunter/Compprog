@@ -1,5 +1,27 @@
 import random
 import time
+def aor():
+    print("Its attacking you!")
+    akorrn = input("do you run, or do you fight back")
+
+def atk():
+    attack = random.randint(1,4)
+    if attack == 1:
+
+        if cr == r2:
+            ent = ("Window!")
+
+        if cr == r4:
+            ent = ("Vent!")
+        mon = random.randint(1,3)
+
+
+        if mon == 1:
+            print("Oh No! a snake came through the",ent)
+        if mon == 2:
+            print("Oh No! a large spider came through the",ent)
+        if mon == 3:
+            print("Oh a cute cat came through the",ent,"this cat reminds me of the painting!")
 
 def Rstart():
     print(name)
@@ -71,6 +93,9 @@ def move():
             print("You can't go through walls!")
             Rstart()
 
+    if act == ("hp"):
+        print(heath)
+
 def game():
     global start
     print ("welcome to GET OUT, this game is about a room that is slowly being slowly filled with fear...")
@@ -81,6 +106,7 @@ def game():
     if gm.lower() == ("y"):
         start = True
         inv = []
+        health = 10
         global dl
         dl = False
     else:
@@ -109,9 +135,9 @@ r1 = ["Up","   A dim light",
       "Right","   A door",]
 
 r2 = ["Up","   A Light",
-      "Down","   ",
-      "Front","   ",
-      "Back","   ",
+      "Down","   Hard stone floor",
+      "Front","   A wall",
+      "Back","   A window",
       "left","   ",
       "Right","   ",]
 
@@ -132,10 +158,10 @@ r4 = ["Up","   ",
 game()
 
 if start == True:
-    cr = r1
+    cr = r3
     print(".")
     time.sleep(1)
-    name = input("What shall thy name be for thyself...eww i don't want to say that ever again   ")
+    name = input("What will your name be?   ")
     time.sleep(1)
     Rstart()
     move()
