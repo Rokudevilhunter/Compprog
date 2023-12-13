@@ -1,19 +1,55 @@
 ## import stuff
 import random
 import time
-
 ## Side stuff
-def playerHealth():
-    print()
+global health
+health = 10 - mobDamage - runDamage
 def mobHealth():
+    global mobH 
+    mobH = int(5 - mobDamage)
     print()
 def mobRun():
-    print()
+    runChance = random.randint(1,2)
+    if runChance == 1:
+        global runDamage
+        runDamage = random.randint(1,3)
+        print("you took dmg")
+        time.sleep(1)
+        newRoom()
+    else:
+        print("you made it out\n")
+        time.sleep(1)
+        newRoom()
 
 def mobAtk():
-    print("")
+    while True:
+        print("you swing")
+        global mobDamage
+        mobDamage = random.randint(1,5)
+        playerDamage = random.randint(1,5)
+        print('you have dealt',playerDamage,'Damage\n')
+        time.sleep(1)
+        print('you have taken',mobDamage,'Damage\n')
+        time.sleep(.5)
+        if mobH <= 0:
+            print("You have killed the Creature")
+            newRoom()
+            break
+        else:
+            mobAction()
+            break
+    
+
 def mobAction():
-    print("do you want to Attack or Run")
+    atkAct = input("do you want to Attack or Run\n")
+    if atkAct == ("run"):
+        mobRun()
+    elif atkAct == ("attack"):
+        print("You attack")
+        time.sleep(1)
+        mobAtk()
+        
+
     
 def randMob():
     mob = random.randint(1,3)
@@ -29,8 +65,10 @@ def newRoom():
     
     while True:
         print("room desc\n")
-        ifmob = random.randint(1,4)
-        if ifmob == (1):
+        time.sleep(1)
+        playerHealth()
+        ifMob = random.randint(1,4)
+        if ifMob == (1):
             randMob()
             mobAction()
             break
@@ -44,7 +82,7 @@ def game():
     while True: 
         print ("welcome to RandomPlayerGame (RPG), where you, a random person, randomly move through a maze and randomly encounter magical beasts!\n")
         time.sleep(1)
-        gameStart = input("Would you like to play?\n")
+        gameStart = input("Would you like to play? y/n\n")
         time.sleep(1)
         if gameStart.lower() == ("y"):
             ##inv = []
